@@ -1,0 +1,9 @@
+version: "3"
+services:
+  income-information-service:
+    image: income-information-service
+    container_name: income-information-service
+    ports:
+      - 8104:8104
+    links:
+      - mymongodb

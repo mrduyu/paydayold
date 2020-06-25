@@ -1,0 +1,9 @@
+version: "3"
+services:
+  kyc-information-service:
+    image: kyc-information-service
+    container_name: kyc-information-service
+    ports:
+      - 8103:8103
+    links:
+      - mymongodb

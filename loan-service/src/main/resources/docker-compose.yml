@@ -1,0 +1,14 @@
+version: "3"
+services:
+  mymongodb:
+    image: mongo:latest
+    container_name: "mymongodb"
+    ports:
+      - 27017:27017
+  loan-service:
+    image: loan-service
+    container_name: loan-service
+    ports:
+      - 8102:8102
+    links:
+      - mymongodb
